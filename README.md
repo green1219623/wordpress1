@@ -19,4 +19,4 @@ adobe XDのデザインカンプからコーディングを行い、wordpressの
 </p>
 
 <h2>使用言語</h2>
-<p>HTML5 / CSS3 / Sass / jQuery /　PHP </p>
+<p>HTML5 / CSS3 / Sass / jQuery / PHP </p>
