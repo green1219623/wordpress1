@@ -1,0 +1,37 @@
+<section class="top">
+    <div class="inner">
+        <div class="top-flex">
+
+            <?php
+            $pickup_posts = get_posts(array(
+                'post_type' => 'post', // 投稿タイプ
+                'posts_per_page' => '3', // 3件取得
+                'tag' => 'pickup', // pickupタグがついたものを
+                'orderby' => 'DESC', // 新しい順に
+            ));
+            ?>
+            <?php foreach ($pickup_posts as $post) : setup_postdata($post); ?>
+
+                <a href="<?php echo esc_url(get_permalink()); ?>" class="top-card-wrap">
+                    <div class="img-wrap">
+                        <?php
+                        if (has_post_thumbnail()) {
+                            the_post_thumbnail('large');
+                        } else {
+                            echo '<img src="' . esc_url(get_template_directory_uri()) . '/img/noimg.png" alt="">';
+                        }
+                        ?>
+                        <div class="main-category-category"><?php my_the_post_category(false); ?></div><!-- /pickup-item-tag -->
+                    </div><!-- /pickup-item-img -->
+                    <div class="pickup-item-body">
+                        <h2 class="top-title"><?php the_title(); ?></h2><!-- /pickup-item-title -->
+                    </div><!-- /pickup-item-body -->
+                </a><!-- /pickup-item -->
+
+            <?php endforeach;
+            wp_reset_postdata(); ?>
+
+
+        </div><!-- top-flex -->
+    </div><!-- inner -->
+</section>
