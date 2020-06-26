@@ -1,0 +1,40 @@
+.top-search-contents {
+    margin: 2rem 0;
+}
+
+.top-search-title{
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    position: relative;
+
+    span{
+        color: $base-red-color;
+        font-weight: bold;
+        margin-left: 1rem;
+    }
+
+    @include mq("sp") {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+       }
+  
+
+    &:before {
+        position: absolute;
+        content: "\f002";
+        color: $base-red-color;
+        font-family: "Font Awesome 5 Free";
+        font-size: 1.6rem;
+        font-weight: 900;
+        top: 50%;
+        left: -1rem;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        @include mq("sp") {
+            font-size: 1.25rem;
+           }
+    }
+}

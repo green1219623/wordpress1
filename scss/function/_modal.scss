@@ -1,0 +1,56 @@
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: none;
+}
+
+.modal-close-img{
+    position: absolute;
+    top:-20px;
+    right: -20px;
+    width: 43px;
+    height: 43px;
+}
+
+.modal-login {
+    position: absolute;
+    color: #707070;
+    background-color: #fff;
+    top: 10%;
+    left: 20%;
+    width: 930px;
+    height: auto;
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+        span {
+            padding-left: 50px;
+            color: $base-blue-color;
+            margin-right: 20px;
+        }
+    }
+
+    p {
+        padding: 30px 50px;
+        margin-left: 45px;
+        
+    }
+}
+
+.modal-btn-wrapper {
+    text-align: center;
+}
+
+.modal-btn {
+    @include button(16px);
+    padding: 10px 66px;
+    margin-bottom: 50px;
+}

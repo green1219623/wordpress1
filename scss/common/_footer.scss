@@ -1,0 +1,178 @@
+// フッター上段
+.footer-text-wrap {
+    background-color: $footer-light-color;
+}
+
+.footer-text-wrap {
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 2rem;
+
+    @include mq("sp") {
+        font-size: 1.6rem;
+    }
+}
+
+.footer-sub-title {
+    font-size: 0.8rem;
+    margin: 0.4rem 0;
+
+    @include mq("sp") {
+        font-size: 0.6rem;
+        margin: 0.6rem 0;
+    }
+}
+
+.footer-menu-flex {
+    display: flex;
+    justify-content: center;
+
+    li {
+        margin-right: 2rem;
+    
+        &:last-child {
+            margin-right: 0;
+        }
+    
+        @include mq("sp") {
+            margin-right: 0;
+            margin-bottom: 0.4rem;
+        }
+    
+        a {
+            color: white;
+            font-size: 0.8rem;
+            transition: all 0.3s ease 0s;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    @include mq("sp") {
+        display: block;
+    }
+}
+
+
+
+// フッター下段
+.footer-bottom {
+    background-color: $footer-dark-color;
+    padding: 1rem 0;
+}
+
+.footer-bottom-text {
+    color: white;
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+// トップボタン
+.top-btn-wrap {
+    position: fixed;
+    bottom: 4rem;
+    right: 1rem;
+}
+
+.top-btn {
+    cursor: pointer;
+    background-color: $top-btn-bgc;
+    border-radius: 50%;
+    height: 3.7rem;
+    position: relative;
+    width: 3.7rem;
+    transition: all 0.3s ease 0s;
+    z-index: 41;
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+.up-btn {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+}
+
+
+// SNSボタン
+.footer-sns {
+	background: #fff;
+	border-top: 1px solid $error-border;
+	bottom: -75px;
+	left: 0;
+	position: fixed;
+	transition: all 0.3s ease 0s;
+	width: 100%;
+	z-index: 25;
+}
+
+.footer-sns.m_fixed_sns {
+	bottom: 0;
+}
+
+.footer-sns > .inner {
+	align-items: center;
+	display: flex;
+	height: 75px;
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+.footer-sns-head {
+	font-size: 14px;
+	margin-right: auto;
+}
+
+.footer-sns-buttons ul {
+	align-items: center;
+	display: flex;
+}
+
+.footer-sns-buttons li{
+    margin-right: 50px;
+    
+    a {
+        text-decoration: none;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+
+.footer-sns-buttons li:last-child {
+	margin-right: 0;
+}
+
+.footer-sns-buttons li a.m_twitter img {
+	width: 26px;
+}
+
+.footer-sns-buttons li a.m_facebook img {
+	width: 11px;
+}
+
+.footer-sns-buttons li a.m_hatena img {
+	width: 22px;
+}
+
+.footer-sns-buttons li a.m_line img {
+	width: 30px;
+}
+
+.footer-sns-buttons li a.m_pocket img {
+	width: 27px;
+}

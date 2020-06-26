@@ -1,0 +1,61 @@
+.menu-bb{
+    border: 1px solid $error-border;
+}
+
+.error-wrap{
+padding: 3rem 0;
+text-align: center;
+margin-bottom: 8rem;
+
+@include mq("sp") {
+    margin-bottom: 2rem;
+     }
+}
+
+.error-title{
+    color: $error-color;
+    font-size: 5rem;
+
+    @include mq("sp") {
+        font-size: 2.5rem;
+    }
+}
+
+.error-sub-title{
+    color: $tag-btn-color;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 1rem;
+
+    @include mq("sp") {
+       font-size: 1.25rem;
+       line-height: 2.5rem;
+        }
+}
+
+.error-text{
+    color: $tag-btn-color;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 3rem 0;
+   
+    @include mq("sp") {
+        font-size: 0.75rem;
+        margin: 3rem auto;
+        width:70%;
+         }
+}
+
+.error-btn{
+    background-color: $h2-bg-color;
+    border-radius: 3px;
+    color: $top-category-color;
+    font-weight: bold;
+    padding: 1rem 4rem;
+}
+.error-sp-db{
+    display: none;
+    @include mq("sp") {
+    display: block;
+    }
+}

@@ -1,0 +1,14 @@
+@charset "UTF-8";
+#about .inner {
+  width: 1500px;
+  /* 好きな幅 */
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 24px;
+  background: #fff59d;
+}
+
+#about h2 {
+  text-align: center;
+  margin: 0 0 24px;
+}

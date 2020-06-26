@@ -1,0 +1,143 @@
+// ヘッダー
+header {
+  background-color: $base-red-color;
+
+}
+
+.header-inner {
+  display: flex;
+  margin: auto;
+  width: 80%;
+
+  @include mq('sp'){
+    display: block;
+    padding: 1.3rem 0;
+  }
+}
+
+// ロゴ
+.header-logo {
+  a{
+  color: white;
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 2rem 1.5rem 2rem 0;
+  transition: all 0.3s ease 0s;
+
+  @include mq('sp'){
+    font-size: 1.5rem;
+    text-align: center;
+ padding: 0;
+  }
+}
+}
+
+// サブタイトル
+.sub-title {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 2rem 0;
+  padding-top: 15px;
+
+  @include mq('sp'){
+    font-size: 0.6rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// リスト
+.menu-text {
+  background-color: #fff;
+  width: 100%;
+
+  @include mq('tab'){
+    display: none;
+  }
+}
+
+// リストmixin
+@mixin list-before($Value) {
+  position: absolute;
+  content: $Value;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  top: 50%;
+  left: -1.3rem;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.menu-flex {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  
+
+  li{
+    padding: 2rem 0;
+    margin-right: 3rem;
+
+    &:last-child{
+      margin-right: 0;
+    }
+  
+    a{
+      font-weight: bold;
+      font-size: 1rem;
+      position: relative;
+      transition: all 0.3s ease 0s;
+  
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    &:nth-child(1) {
+      a {
+        &:before {
+          @include list-before("\f015");
+        }
+      }
+    }
+  
+    &:nth-child(2) {
+      a {
+        &:before {
+          @include list-before("\f02d");
+        }
+      }
+    }
+  
+    &:nth-child(3) {
+      a {
+        &:before {
+          @include list-before("\f0f4");
+        }
+      }
+    }
+  
+    &:nth-child(4) {
+      a {
+        &:before {
+          @include list-before("\f109");
+        }
+      }
+    }
+  
+    &:nth-child(5) {
+      a {
+        &:before {
+          @include list-before("\f0e0");
+        }
+      }
+    }
+  
+  }
+}
+
+
+

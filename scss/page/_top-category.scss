@@ -1,0 +1,230 @@
+// カテゴリー上部
+.breadcrumb {
+    color: #8d8d8d;
+    font-size: 12px;
+    margin-bottom: 14px;
+}
+
+.breadcrumb .home::before {
+    color: #8d8d8d;
+    content: "\f015";
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.breadcrumb a {
+    color: #8d8d8d;
+    margin-right: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.breadcrumb a:hover {
+    opacity: 0.6;
+}
+
+.breadcrumb i {
+    color: #8d8d8d;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.top-category-top {
+    border-bottom: 3px solid $base-red-color;
+    display: flex;
+    padding-bottom: 1.5rem;
+
+    @include mq("sp") {
+        padding-bottom: 1rem;
+    }
+
+    &.home::before {
+        content: "\f015";
+        font-family: "Font Awesome 5 Free", sans-serif;
+        font-weight: 900;
+        margin-right: 10px;
+    }
+}
+
+// カテゴリーサブタイトル
+.top-category-contents {
+    margin: 2rem 0 4rem 0;
+}
+
+// ホーム
+.top-category-top-text {
+    color: #8d8d8d;
+    font-size: 0.75rem;
+    position: relative;
+    margin: 0 2rem 0 1.5rem;
+    &:before {
+        position: absolute;
+        content: "\f015";
+        font-family: "Font Awesome 5 Free";
+        font-size: 0.75rem;
+        font-weight: 900;
+        top: 50%;
+        left: -1.5rem;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
+// カテゴリー名
+.category-top-text-second {
+    color: #8d8d8d;
+    font-size: 0.75rem;
+    position: relative;
+    &:before {
+        position: absolute;
+        content: "\f054";
+        font-family: "Font Awesome 5 Free";
+        font-size: 0.75rem;
+        font-weight: 900;
+        top: 50%;
+        left: -1rem;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
+// カテゴリーメイン
+.top-category-sub-title {
+    color: $base-red-color;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.archive-title {
+    font-size: 1.6rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+
+    @include mq("sp") {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &:before {
+        position: absolute;
+        content: "\f02d";
+        color: $base-red-color;
+        font-family: "Font Awesome 5 Free";
+        font-size: 1.6rem;
+        font-weight: 900;
+        top: 50%;
+        left: -2rem;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+        @include mq("sp") {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.top-category-text {
+    font-size: 0.8rem;
+}
+
+// コンテンツ
+.article-flex-category {
+    display: block;
+}
+
+.main-card-wrap-category {
+    box-shadow: 0px 0px 3px $shadow-color;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 2rem;
+    padding: 1.2rem;
+    @include mq("sp") {
+        padding: 0.6rem;
+    }
+}
+
+.main-card-img-category {
+    width: 35%;
+    @include mq("sp") {
+        width: 50%;
+    }
+}
+
+.main-card-text-wrap-category {
+    padding-left: 1rem;
+    @include mq("sp") {
+        padding-left: 0.5rem;
+    }
+}
+
+.main-card-title-category {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    @include mq("sp") {
+        font-size: 0.75rem;
+    }
+}
+
+.main-card-text-category {
+    font-size: 0.8rem;
+    @include mq("sp") {
+        display: none;
+    }
+}
+
+// カテゴリー
+.main-category-category {
+    background-color: $base-red-color;
+    color: white;
+    display: inline-block;
+    font-size: 0.75rem;
+    margin-right: 2.5rem;
+    padding: 0.3rem 0.8rem;
+
+    @include mq("tab") {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    @include mq("sp") {
+    }
+}
+
+// カテゴリーと日付 flex
+.main-card-detail-wrap-category {
+    display: flex;
+    padding: 0.5rem 0;
+
+    @include mq("sp") {
+        padding-top: 0;
+    }
+}
+
+// 日付
+.main-card-date-category {
+    font-size: 0.75rem;
+    margin-top: 4px;
+    position: relative;
+
+    @include mq("sp") {
+        margin-top: 2px;
+    }
+    &:before {
+        position: absolute;
+        content: "\f073";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        top: 0px;
+        left: -20px;
+
+        @include mq("sp") {
+            left: -14px;
+        }
+    }
+}

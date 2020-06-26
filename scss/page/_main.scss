@@ -1,0 +1,460 @@
+.main {
+    background-color: white;
+}
+
+// 全体のflex
+.main-flex {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+.main-left {
+    width: 66.6666%;
+
+    @include mq("tab") {
+        width: 100%;
+    }
+}
+
+.main-right {
+    width: 33.33333%;
+    padding-left: 50px;
+
+    @include mq("tab") {
+        width: 100%;
+    }
+
+    @include mq("sp") {
+        padding-left: 0;
+    }
+}
+
+// 記事のflex
+.article-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// カード
+.main-card-wrap {
+    cursor: pointer;
+    font-size: 0;
+    margin: 0 50px 50px 0;
+    width: calc(50% - 50px / 2);
+
+    &:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    @include mq("sp") {
+        width: 100%;
+        margin: 0 0px 30px 0;
+    }
+}
+
+.main-card-text-wrap {
+    box-shadow: 0px 0px 3px $shadow-color;
+    padding: 1.5rem;
+
+    @include mq("sp") {
+        padding: 1rem;
+    }
+}
+
+// カテゴリーと日付 flex
+.main-card-detail-wrap {
+    display: flex;
+    padding: 0.5rem 0;
+}
+
+// カテゴリー
+.main-category {
+    background-color: $base-red-color;
+    color: white;
+    display: inline-block;
+    font-size: 0.75rem;
+    margin-right: 2.5rem;
+    padding: 0.3rem 0.8rem;
+
+    @include mq("tab") {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.5rem;
+    }
+}
+
+// 日付
+.main-card-date {
+    font-size: 0.75rem;
+    margin-top: 4px;
+    position: relative;
+    &:before {
+        position: absolute;
+        content: "\f073";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        top: 0px;
+        left: -20px;
+    }
+}
+
+// カードタイトル
+.main-card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+// カードテキスト
+.main-card-text {
+    font-size: 0.8rem;
+}
+
+// プロフィール
+.profile-wrap {
+    padding: 0 20px 60px 20px;
+
+    @include mq("sp") {
+        padding: 0 0px 50px 0px;
+    }
+}
+
+// レスポンシブ flex
+.profile-tab-flex {
+    @include mq("tab") {
+        display: flex;
+
+        @include mq("sp") {
+            display: block;
+        }
+    }
+}
+
+// タイトル
+.main-right-title {
+    font-size: 1.2rem;
+    position: relative;
+    padding-bottom: 1.5rem;
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 7px;
+        background: repeating-linear-gradient(-45deg, $base-red-color, $base-red-color 4px, white 4px, white 8px);
+    }
+}
+
+.profile-img {
+    display: block;
+    padding: 2rem 0;
+    margin: auto;
+    width: 80%;
+
+    @include mq("tab") {
+        width: 50%;
+    }
+
+    @include mq("sp") {
+        padding: 1rem 0;
+        width: 80%;
+    }
+}
+
+.profile-text {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+
+    @include mq("tab") {
+        margin-top: 6rem;
+        width: 50%;
+    }
+
+    @include mq("sp") {
+        margin-top: 0;
+        padding-bottom: 1rem;
+        margin: auto;
+        width: 80%;
+    }
+}
+
+// アイコン
+.profile-icon-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-twitter {
+    color: $twitter;
+    padding-right: 2rem;
+    transition: all 0.3s ease 0s;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.profile-facebook {
+    color: $facebook;
+    padding-right: 2rem;
+    transition: all 0.3s ease 0s;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.profile-instagram {
+    color: $instagram;
+    transition: all 0.3s ease 0s;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.my-big {
+    font-size: 1.5em;
+}
+
+// 検索
+.search-wrap {
+    padding: 0 20px 60px 20px;
+
+    @include mq("sp") {
+        padding: 0 0px 50px 0px;
+    }
+}
+
+.search-btn {
+    position: relative;
+}
+.text-send {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1em;
+    margin-top: 2rem;
+    padding: 0.4em 0.8em;
+    width: 100%;
+}
+
+.text-send:focus {
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    box-shadow: none;
+    outline: none;
+}
+
+//  検索ボタン
+.submit-send {
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    color: $footer-font-color;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    padding: 0.6em 1em;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    top: 33px;
+    transition: all 0.3s ease 0s;
+    &:hover {
+        color: $base-font-color;
+    }
+}
+
+.submit-send:hover,
+.submit-send:focus {
+    outline: none;
+}
+
+.submit-send::-moz-foucus-inner {
+    border: none;
+    padding: 0;
+}
+
+//人気記事
+.popular-wrap {
+    padding: 0 20px 60px 20px;
+
+    @include mq("sp") {
+        padding: 0 0px 50px 0px;
+    }
+}
+
+.popular-archive-wrap {
+    margin-top: 2rem;
+}
+
+.popular-flex {
+    display: flex;
+    margin-bottom: 1rem;
+    &:nth-child(5) {
+        margin-bottom: 0;
+    }
+}
+
+.popular-img-wrap {
+    cursor: pointer;
+    position: relative;
+    width: 40%;
+}
+
+.popular-number {
+    background-color: $base-blue-color;
+    color: white;
+    font-size: 0.6rem;
+    left: 0;
+    padding: 0 0.5rem;
+    position: absolute;
+    top: 0;
+}
+
+.popular-text {
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding-left: 0.5rem;
+    width: 60%;
+}
+
+// 新着記事
+.new-wrap {
+    padding: 0 20px 60px 20px;
+
+    @include mq("sp") {
+        padding: 0 0px 50px 0px;
+    }
+}
+
+// アーカイブ
+.archive-wrap {
+    padding: 0 20px 60px 20px;
+    ul {
+        margin-top: 20px;
+        a {
+            border-bottom: 1px solid #cecdcd;
+            display: block;
+            padding: 0.8rem 0;
+            position: relative;
+            &:after {
+                position: absolute;
+                content: "\f054";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                top: 50%;
+                right: 4px;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    @include mq("sp") {
+        padding: 0 0px 50px 0px;
+    }
+}
+
+.archive-p {
+    cursor: pointer;
+    border-bottom: 1px solid #cecdcd;
+    padding: 0.8rem 0;
+    position: relative;
+    &:after {
+        position: absolute;
+        content: "\f054";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        top: 50%;
+        right: 4px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
+// ネクストボタン
+.pagenation {
+    margin-top: 12px;
+    text-align: center;
+
+    @include mq("tab") {
+        margin: 1rem 0 3rem 0;
+    }
+}
+
+.pagenation a {
+    transition: all 0.3s ease 0s;
+}
+
+.pagenation a:hover {
+    opacity: 0.6;
+}
+
+.pagenation a.next,
+.pagenation a.prev {
+    font-size: 30px;
+}
+
+.pagenation a.next:hover,
+.pagenation a.prev:hover {
+    opacity: 0.6;
+}
+
+.page-numbers {
+    background: white;
+    border: 1px solid $error-border;
+    color: $tag-btn-color;
+    display: inline-block;
+    font-size: 20px;
+    height: 40px;
+    line-height: 38px;
+    margin-right: 14px;
+    min-width: 40px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.page-numbers:last-child {
+    margin-right: 0;
+}
+
+.page-numbers.current {
+    background: $base-red-color;
+    border: 1px solid $base-red-color;
+    color: white;
+    font-weight: 700;
+}
+
+.page-numbers.dots,
+.page-numbers.next,
+.page-numbers.prev {
+    border: none;
+    line-height: 40px;
+    min-width: initial;
+    width: auto;
+}
+
+.widget-title {
+    a {
+        margin: 0 20px;
+    }
+}
+
+.widget {
+    padding: 0 0px 60px 0px !important;
+}
+
+// twitter
+.timeline-Header-title {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 24px;
+}
